@@ -146,3 +146,44 @@ remote:
 To https://github.com/sooraj713/Assignments.git
  * [new branch]      Development -> Development
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TASK 2.1)Now you have set up all the branches for environments. We'll do a workflow of how we use git in our daily practice.
+
+1) Make a new feature branch from the development environment feature for the card# GIT-001 (introduce subtraction method subtract(a,b) ). and implement that in the feature branch and push those changes to git.
+
+
+step1---> make a new feature branch under Development branch named as GIT-001
+step2---> add substraction code
+step3 ---> commit the changes 
+step4----> merge GIT-001 to Development and development with main branch 
+
+---------------------------------------------------------------------------------
+
+2)2) Make a new feature branch from the development environment feature for the card# GIT-002 (introduce multiplication method multiply(a,b) ). and implement that in the feature branch and push those changes to git.
+
+
+step1---> make a new feature branch under Development branch named as GIT-002
+step2---> add multiplication code
+step3 ---> commit the changes 
+step4----> merge GIT-002 to Development and development with main branch 
+
+---------------------------------------------------------------------------------
+
+3) merge feature GIT-001 that to development branch with using pull request and follow your branching and merging process and merge it.
+4) Merge dev branch to staging branch via Pull reques
+step1--> merged Development branch to Main branch 
+step2---> push all changes o github
+
+----------------------------------------------------------------------------------
+
+5)5) Create a new release tag from the staging branch after merging and push it.
+
+
+step1---> created one release tag named as v.1.0 and push it on git
+
+git tag v.1.0
+git push origin v.1.0
+
+
+----------------------------------------------------------------------------------------------
