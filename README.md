@@ -58,3 +58,91 @@ Date:   Wed Jan 20 19:41:49 2021 +0530
 
 
 Task 1.3)
+3) Create 3 separate environments as Production, Staging, and Development from the base branch and push those as well.	
+
+
+process:---
+
+root@suswap98:/home/suswap98/Desktop/Assignments# git branch
+* main
+root@suswap98:/home/suswap98/Desktop/Assignments# git checkout -b Production
+M	README.md
+Switched to a new branch 'Production'
+root@suswap98:/home/suswap98/Desktop/Assignments# git checkout -b Staging
+M	README.md
+Switched to a new branch 'Staging'
+root@suswap98:/home/suswap98/Desktop/Assignments# git checkout -b Development
+M	README.md
+Switched to a new branch 'Development'
+root@suswap98:/home/suswap98/Desktop/Assignments# git branch
+* Development
+  Production
+  Staging
+  main
+root@suswap98:/home/suswap98/Desktop/Assignments# git checkout master
+error: pathspec 'master' did not match any file(s) known to git.
+root@suswap98:/home/suswap98/Desktop/Assignments# git status
+On branch Development
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@suswap98:/home/suswap98/Desktop/Assignments# git add .
+root@suswap98:/home/suswap98/Desktop/Assignments# git commit -m "task 1.2"
+[Development bd5ce21] task 1.2
+ 1 file changed, 60 insertions(+), 18 deletions(-)
+ rewrite README.md (60%)
+root@suswap98:/home/suswap98/Desktop/Assignments# push origin Production
+
+Command 'push' not found, did you mean:
+
+  command 'pwsh' from snap powershell (7.1.1)
+  command 'pdsh' from deb pdsh
+  command 'rush' from deb rush
+  command 'ppsh' from deb ppsh
+  command 'posh' from deb posh
+
+See 'snap info <snapname>' for additional versions.
+
+root@suswap98:/home/suswap98/Desktop/Assignments# git push origin Production
+Username for 'https://github.com': soorajgaikwad713@gmail.com
+Password for 'https://soorajgaikwad713@gmail.com@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 682 bytes | 682.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'Production' on GitHub by visiting:
+remote:      https://github.com/sooraj713/Assignments/pull/new/Production
+remote: 
+To https://github.com/sooraj713/Assignments.git
+ * [new branch]      Production -> Production
+root@suswap98:/home/suswap98/Desktop/Assignments# git push origin Staging
+Username for 'https://github.com': soorajgaikwad713@gmail.com
+Password for 'https://soorajgaikwad713@gmail.com@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'Staging' on GitHub by visiting:
+remote:      https://github.com/sooraj713/Assignments/pull/new/Staging
+remote: 
+To https://github.com/sooraj713/Assignments.git
+ * [new branch]      Staging -> Staging
+root@suswap98:/home/suswap98/Desktop/Assignments# git push origin Development
+Username for 'https://github.com': soorajgaikwad713@gmail.com
+Password for 'https://soorajgaikwad713@gmail.com@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.11 KiB | 1.11 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'Development' on GitHub by visiting:
+remote:      https://github.com/sooraj713/Assignments/pull/new/Development
+remote: 
+To https://github.com/sooraj713/Assignments.git
+ * [new branch]      Development -> Development
+
