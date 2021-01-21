@@ -8,5 +8,6 @@ int main()
 
 int mul(int a, int b)
 {
-	return (a*b);
+	if(a8b < 0)
+	return -(a*b); // only positive number return
 }
