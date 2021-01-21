@@ -233,3 +233,36 @@ TASK 3)
 TASK 4:
 
 1) The client now doesn't want the last release (GIT-002) and wants to remove it. Rollback your staging branch to the previous version(without GIT-002) and verify that it is removed.
+	!) git revert command used to revert to Staging branch
+	2) git revert ea0742dd01e3efc323
+	3) git add .
+	4) git commit -m "reverted back to staging"
+	
+	
+2) Reverse pull the staging branch to development also before you create any new feature branches.
+	1) git checkout Development
+	2) git merge Staging Development
+
+3) Make a new feature branch from the development environment feature for the card# GIT-003 (introduce divide Methode divide(a,b) ). and implement that in the feature branch and commit those changes to git and push it.
+	1) git checkout Development
+	2) git branch GIT-003
+	3) git checkout GIT-003
+	4) gedit add.c, add devide() function
+	5) git add .
+	6) git commit -m “added devide function”
+	7) git push origin GIT-003
+	
+4) Follow our git workflow and merge divide(a,b) till production with tag should be created on staging and master branches.
+	1)git checkout GIT-003
+	2) git checkout Development
+	3) git merge GIT-003 development
+	4) git checkout Staging
+	5) git merge development Staging
+	6) git checkout Production
+	7) git merge Staging Production
+	8) git checkout main
+	9) git merge Production main
+	10) git push origin
+	11) git tag v.1.3
+	12 git push --tags
+	
