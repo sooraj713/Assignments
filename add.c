@@ -2,6 +2,7 @@
 int main()
 {
 	int a=10,b=20;
+
 	printf("Addition: %d",addition(a,b));
 	printf("Substraction: %d",sub(a,b));
 	return 0;
