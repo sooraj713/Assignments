@@ -187,3 +187,49 @@ git push origin v.1.0
 
 
 ----------------------------------------------------------------------------------------------
+
+TASK 3)
+1) After you change to the QA staging branch the requested that for subtask, they do not want negative output, so make changes that the negative number is always gets converted to a positive integer and return it. Make a hotfix branch and create a pull request of it and merge it back.
+	step1--->create a hostfix1 branch
+
+	1) git checkout -b Hostfix1 main
+	2) git gedit add.c                 // for adding new feature like non negative no
+	3) git add .
+	4) git commit -m "Hotfix1 added feature of non negative no"
+	5) git checkout main
+	6) git merge main Hotfix1
+
+1.5) Create a tag of the hotfix on the staging branch and push it.
+	1) git tag v.1.1
+	2) git push origin
+	
+	
+
+2) merge feature GIT-002 that to development branch using pull request and follow your branching and merging process and merge it.
+ 
+	1) git checkout Development
+	2) git merge development GIT-002
+	
+2.5) (If conflicts arrive in PR, solve those conflicts, and then create the PR). Make sure all the old methods are their code is present and also after the merge code of GIT-002 is there in the staging branch.   
+	1) conflict occurs in my case i resolved it manually 
+	
+	
+3) merge development to staging and Create a new release tag from the staging branch after merging, if conflicts arrives, please solve them and merge dev to staging via Pull request.
+	
+	1) git checkout Staging
+	2)git merge Staging Development
+		Updating e08bc17..977fd54
+		Fast-forward
+		 README.md | 136 		+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---
+		 add.c     |  11 ++++++++---
+		 mul.c     |  12 ++++++++++++
+		 3 files changed, 153 insertions(+), 6 deletions(-)
+		 create mode 100644 mul.c
+	3) git push
+	
+	
+==================================================================================================================================================
+
+TASK 4:
+
+1) The client now doesn't want the last release (GIT-002) and wants to remove it. Rollback your staging branch to the previous version(without GIT-002) and verify that it is removed.
